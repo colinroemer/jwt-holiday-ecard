@@ -1,0 +1,246 @@
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+body, html {
+  height: 100%;
+  min-height: 100%;
+  background-color: #000000;
+}
+body {
+  margin: 0 auto;
+}
+.no-js {
+  padding-top: 106px;
+}
+
+
+.loading {
+  
+}
+section {
+  opacity: 0;
+  height: 400px;
+}
+
+.loaded section,
+.no-js section {
+  opacity: 1;
+  -webkit-transition: opacity 30ms ease-out;
+  -moz-transition: opacity 30ms ease-out;
+  transition: opacity 30ms ease-out;
+}
+
+#preload {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+canvas {
+  display: block;
+}
+
+.bcg {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.homeSlide {
+
+}
+
+.hsContainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/*Kai: Added bg colors to the slides to fill in the gaps on small screens*/
+
+/* Slide 1 */
+#slide-1 .bcg 
+{/*{background-color: rgb(51,180,221); */
+  background-image: url('../img/home_slide.jpg');
+  background-color: #33B4DC;
+}
+
+/* Slide 2 */
+#slide-2 .bcg {
+  background-image: url('../img/Owl_Animation1.gif');
+  background-color: #A5D033;
+}
+
+/* Slide 3 */
+#slide-3 .bcg {
+  background-image: url('../img/snowman3.gif');
+  background-color: #E95D99;
+}
+
+/* Slide 4 */
+#slide-4 .bcg {
+  background-image: url('../img/trophy.gif');
+  background-color: #EE9A9A;
+}
+
+/* Slide 4 */
+#slide-5 .bcg {
+  background-image: url('../img/hot_coco.gif');
+  background-color: #BA73DC;
+}
+
+#slide-6 .bcg {
+  background-image: url('../img/jwt_holiday_site_Last_Page.jpg');
+  background-color: #33B4DC;
+}
+
+
+/* Side Nav */
+div#nav {
+  position : fixed;
+  right     : 0%;
+  z-index  : 9;
+  background-color: #FFFFFF;
+  height: 100%;
+  width: 40px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  height   : 0px;
+  position : relative;
+  list-style  : none;
+}
+
+div#nav .nav-logo{
+  padding: 50% 10%;
+}
+
+div#nav .nav-slide{
+  padding: 50% 20%;
+}
+div#nav .nav-divider{
+  padding: 50% 20%;
+}
+
+li .nav-divider-img {
+  width: 100%;
+}
+
+li .nav-logo-img {
+  width: 100%;
+}
+
+li .nav-slide-img {
+  width: 100%;
+}
+
+.slide-nav-container {
+  margin-top: 40%;
+  margin-bottom: 40%;
+}
+
+.slide-nav img {
+  padding: 2px 0;
+}
+
+.nav-logo-container {
+  margin-top: 80%;
+  margin-bottom: 30%;
+  padding-bottom: 40%;
+}
+
+.nav-divider-container {
+  margin-top: 40%;
+  margin-bottom: 40%;
+  padding-bottom: 50%;
+}
+
+#nav li.active a {
+  background : url('images/grey-pink-dot.png') 0 100% no-repeat;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .bcg {
+    background-attachment: initial;
+  }
+}
+
+
+@media only screen and (max-width: 450px) {
+
+  /*Reduce spacing of nav so it all fits on small screens*/
+  .nav-logo-container {
+    margin-top: 0;
+  }
+  .nav-divider-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  /*Pump up the background sizes on small devices*/
+  .bcg {
+    background-size: 130%;
+  }
+  #slide-6 .bcg {
+    background-size: 160%;
+  }
+
+}
+
+
+@media only screen and (max-height: 481px) {
+
+  .slide-nav-container, .nav-divider-container {
+    display: none;
+  }
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+/*Kai: I'm not sure what you were trying to accomplish with tablets*/
+
+/*@media only screen and (min-width: 768px) { 
+
+  section {
+    min-width: 1200px;
+    opacity: 0;
+  }
+
+  canvas {
+    display: block;
+  }
+
+  .bcg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+  .homeSlide {
+
+  }
+
+  .hsContainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+}*/
